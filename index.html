@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chao Mein Express | Comida China a Domicilio — Escuintla</title>
+    <meta name="description" content="Comida china auténtica en Escuintla. Servicio a domicilio con Delivery Flash. Pide al WhatsApp 5491-6094">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        :root { --rojo: #c41e3a; --dorado: #f5b301; --negro: #1a1a1a; --crema: #fff9e8; }
+        body { background: var(--crema); color: #333; line-height: 1.6; }
+        
+        header { background: linear-gradient(135deg, var(--rojo), #9c1730); color: white; padding: 2rem 1rem; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 0.3rem; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        
+        nav { background: var(--negro); position: sticky; top: 0; z-index: 999; }
+        nav ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; }
+        nav a { color: white; text-decoration: none; padding: 0.9rem 1.1rem; display: block; transition: 0.3s; }
+        nav a:hover, nav a.activo { background: var(--rojo); color: var(--dorado); }
+        
+        section { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1rem; display: none; }
+        section.activa { display: block; animation: aparecer 0.4s ease; }
+        @keyframes aparecer { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+        
+        h2 { text-align: center; font-size: 1.8rem; margin-bottom: 2rem; color: var(--rojo); }
+        h2::after { content: ''; display: block; width: 70px; height: 4px; background: var(--dorado); margin: 0.5rem auto; border-radius: 2px; }
+        
+        .tarjeta { background: white; border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: 0.3s; }
+        .tarjeta:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+        .tarjeta h3 { font-size: 1.3rem; color: var(--rojo); margin-bottom: 0.8rem; }
+        .precio { font-size: 1.5rem; font-weight: bold; color: var(--rojo); margin-top: 0.5rem; }
+        .etiqueta { display: inline-block; background: var(--dorado); color: var(--negro); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem; margin-bottom: 0.8rem; }
+        
+        .btn { display: inline-block; background: var(--rojo); color: white; padding: 0.9rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1rem; margin: 0.5rem; transition: 0.3s; border: none; cursor: pointer; text-align: center; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(196,30,58,0.3); }
+        .btn.dorado { background: var(--dorado); color: var(--negro); }
+        
+        .foto-plato { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem; background: #f0e9d6; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        
+        .info-linea { font-size: 1.1rem; margin: 1rem 0; display: flex; align-items: center; gap: 0.7rem; }
+        .info-linea span { font-size: 1.4rem; }
+        
+        footer { background: var(--negro); color: white; text-align: center; padding: 2rem 1rem; margin-top: 2rem; font-size: 0.95rem; }
+        .destacado { color: var(--dorado); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<!-- CABECERA -->
+<header>
+    <h1>🥢 CHAO MEIN EXPRESS 🥢</h1>
+    <p>Auténtico sabor de la cocina china — Escuintla</p>
+    <p style="margin-top:0.5rem; font-weight:bold;">⚡ Entrega rápida con Delivery Flash</p>
+</header>
+
+<!-- MENÚ -->
+<nav>
+    <ul>
+        <li><a href="#inicio" class="activo" data-pagina="inicio">Inicio</a></li>
+        <li><a href="#combos" data-pagina="combos">Combos</a></li>
+        <li><a href="#platillos" data-pagina="platillos">Platillos</a></li>
+        <li><a href="#pedido" data-pagina="pedido">Pide Aquí</a></li>
+    </ul>
+</nav>
+
+<!-- PÁGINA INICIO -->
+<section id="inicio" class="activa">
+    <h2>¡Bienvenidos! 👨‍👩‍👧‍👦</h2>
+    
+    <div class="tarjeta" style="text-align:center; padding:2rem;">
+        <p style="font-size:1.15rem; margin-bottom:1.5rem;">
+            Comida china preparada con <strong>frescura, tradición y mucho cariño</strong> para ti y tu familia.
+        </p>
+        <p style="font-size:1.1rem; margin-bottom:1.5rem;">
+            Llegamos a <strong>todas las colonias de Escuintla</strong> ⚡
+        </p>
+        
+        <a href="#pedido" class="btn dorado" style="font-size:1.2rem;">📞 WhatsApp: 5491-6094</a>
+        
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px,1fr)); gap:1rem; margin-top:2rem;">
+            <div>🥢 Recetas auténticas</div>
+            <div>🦐 Ingredientes frescos</div>
+            <div>⚡ Entrega rápida</div>
+            <div>💛 Para toda la familia</div>
+        </div>
+    </div>
+</section>
+
+<!-- PÁGINA COMBOS -->
+<section id="combos">
+    <h2>🥡 Nuestros Combos</h2>
+    
+    <div class="tarjeta">
+        <span class="etiqueta">⭐ Más pedido</span>
+        <h3>Delicia Oriental — Personal</h3>
+        <div class="foto-plato">🥢</div>
+        <p>✅ 2 Tacos Chinos Mixtos<br>✅ 3 Wantanes de Camarón Dorados<br>✅ Jugo de Naranja fresco</p>
+        <div class="precio">Q65</div>
+    </div>
+    
+    <div class="tarjeta">
+        <span class="etiqueta">👨‍👩‍👧‍👦 Familiar</span>
+        <h3>Box to Box Oriental — Para Compartir</h3>
+        <div class="foto-plato">🍱</div>
+        <p>✅ Arroz frito con camarón<br>✅ Fideos salteados mixtos (lomito, pollo y camarón)<br>✅ 4 Tacos chinos crujientes<br>✅ Wantanes rellenos + Pan tostado<br>✅ Bebida grande incluida</p>
+        <div class="precio">Pídelo al WhatsApp</div>
+    </div>
+    
+    <div class="tarjeta">
+        <span class="etiqueta">🔥 Especial</span>
+        <h3>Dragón Dorado</h3>
+        <div class="foto-plato">🐉</div>
+        <p>✅ Salteado mixto: lomito, pollo, camarón y nueces<br>✅ Arroz frito especial<br>✅ Wantanes crujientes + Pan tostado<br>✅ Bebida Cool 1.5L</p>
+        <div class="precio">Pídelo al WhatsApp</div>
+    </div>
+</section>
+
+<!-- PÁGINA PLATILLOS -->
+<section id="platillos">
+    <h2>🍜 Platillos Estrella</h2>
+    
+    <div class="tarjeta">
+        <h3>Tacos Chinos Mixtos — Platillo Grande</h3>
+        <div class="foto-plato">🌮</div>
+        <p><strong>6 unidades</strong> rellenas de la combinación perfecta:</p>
+        <p style="margin:0.8rem 0;">🥩 Lomito &nbsp;|&nbsp; 🍗 Pollo &nbsp;|&nbsp; 🦐 Camarón</p>
+        <p>Crujientes por fuera, jugosos por dentro. Acompañados de nuestra <strong>salsa agridulce especial</strong> de la casa.</p>
+        <div class="precio">Pídelo ya 📞</div>
+    </div>
+    
+    <div class="tarjeta">
+        <h3>Chao Mein Tradicional</h3>
+        <div class="foto-plato">🍜</div>
+        <p>Fideos salteados al estilo auténtico con verduras frescas y la carne que prefieras. El favorito de grandes y chicos 😍</p>
+        <div class="precio">Consulta precio</div>
+    </div>
+    
+    <div class="tarjeta">
+        <h3>Arroz Frito Especial</h3>
+        <div class="foto-plato">🍚</div>
+        <p>Con camarón, pollo y verduras finamente picadas. Preparado al punto exacto para que quede suelto y lleno de sabor.</p>
+        <div class="precio">Consulta precio</div>
+    </div>
+</section>
+
+<!-- PÁGINA PEDIDO -->
+<section id="pedido">
+    <h2>📲 Haz tu Pedido</h2>
+    
+    <div class="tarjeta" style="text-align:center;">
+        <h3>Escríbenos directo</h3>
+        
+        <div class="info-linea" style="justify-content:center; font-size:1.4rem; margin:1.5rem 0;">
+            <span>📞</span>
+            <strong class="destacado">5491-6094</strong>
+        </div>
+        
+        <p style="font-size:1.1rem; margin-bottom:1.5rem;">Por WhatsApp, fácil y rápido 💬</p>
+        
+        <a href="https://wa.me/50254916094" target="_blank" class="btn" style="font-size:1.1rem; padding:1rem 2rem;">
+            💬 Escribir Ahora
+        </a>
+        
+        <hr style="border:none; border-top:1px solid #eee; margin:2rem 0;">
+        
+        <div style="text-align:left; max-width:400px; margin:0 auto;">
+            <div class="info-linea"><span>⚡</span> Entrega rápida con <strong>Delivery Flash</strong></div>
+            <div class="info-linea"><span>📍</span> Llegamos a <strong>todas las colonias de Escuintla</strong></div>
+            <div class="info-linea"><span>🕐</span> Horarios: Escríbenos y te confirmamos</div>
+        </div>
+        
+        <div style="margin-top:2rem; padding:1.2rem; background:#fef3c7; border-radius:12px;">
+            <p style="font-weight:bold; color:#92400e;">✅ Cómo funciona:</p>
+            <p style="margin-top:0.5rem;">1️⃣ Escríbenos lo que quieres<br>
+            2️⃣ Te confirmamos precio y tiempo<br>
+            3️⃣ Lo preparamos y te lo llevamos 🛵<br>
+            4️⃣ ¡Disfruta tu comida rica! 😋</p>
+        </div>
+    </div>
+</section>
+
+<!-- PIE -->
+<footer>
+    <p>🥢 <strong>Chao Mein Express</strong> — Sabor auténtico en Escuintla</p>
+    <p style="margin-top:0.5rem;">📞 WhatsApp: <span class="destacado">5491-6094</span> &nbsp;|&nbsp; ⚡ Delivery Flash</p>
+    <p style="margin-top:1rem; font-size:0.85rem; opacity:0.7;">© 2026 — Todos los derechos reservados</p>
+</footer>
+
+<!-- SCRIPT PARA NAVEGAR -->
+<script>
+const enlaces = document.querySelectorAll('nav a[data-pagina]');
+enlaces.forEach(enlace => {
+    enlace.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('section').forEach(s => s.classList.remove('activa'));
+        document.querySelectorAll('nav a').forEach(a => a.classList.remove('activo'));
+        document.getElementById(enlace.dataset.pagina).classList.add('activa');
+        enlace.classList.add('activo');
+        window.scrollTo({top:0, behavior:'smooth'});
+    });
+});
+</script>
+
+</body>
+</html>
